@@ -1,0 +1,877 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0; 
+    padding: 0; 
+    background-color: #071e2f;}
+
+html{
+    scroll-behavior: smooth;
+    background-image: url(Pictures/body_background.png);
+    background-size: cover;}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;}
+
+a{
+    transition: all 30ms ease;}
+
+.nav-heading-font-size
+{
+    font-size: 1.3rem;
+    color:#818185;
+    margin-bottom: 2rem;
+
+    /* color: #c0c0c0; */
+    width: 100vw; 
+    text-align: center;
+    border-bottom: 0.5px solid #c0c0c0;
+    line-height: 0.1em; /*adjusting the height of border-bottom*/
+    box-sizing: border-box;}
+
+/*Header section*/
+header
+{
+    width: 100vw; 
+    height: 15vh; 
+    /* border: 1px solid white; */}
+
+#header-nav-desktop
+{
+    width:100vw; 
+    max-width: 100vw;
+    height: 15vh; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;}
+
+#header-nav-desktop .logo
+{
+    width: 23vw; 
+    box-sizing: border-box;
+    margin-right: 10vw;
+    /* background-color: rgb(90, 90, 232); */}
+
+.logo img
+{
+    width: 100%; 
+    height: 100%;
+    object-fit: fill;}
+
+/*End of Header*/
+
+/*nav links*/
+.nav-links
+{
+    width: 67vw;  
+    height: 100%; 
+    gap: 2rem; 
+    list-style: none;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;}
+
+a
+{
+    position: relative; 
+    letter-spacing: 0.5px;
+    color: #c0c0c0;
+    text-decoration: none;
+    background-color: transparent;}
+a:hover
+{
+    color: #ffffff;}
+a:after
+{
+    content: "";
+    position: absolute; 
+    background-color: rgb(244, 238, 238);
+    height: 1.9px; 
+    width: 0; /*set width to 0 and after the hovering,the width is set to 100%*/
+    left: 0%; 
+    bottom: 0px;
+    transition: width 0.5s, height 0.5s, transform 0.5s;}
+
+
+.nav-links a:hover:after
+{
+    width: 100%; /*when the cursur move to the navigation link like home, contact . The line is shown at the bottom of the navigation link*/}
+.nav-links a.active
+{
+    color: #006bc3; }
+
+/*End of nav links*/
+
+/*hamburger--> when the media screen is less than 1200px*/
+#hamburger-nav
+{
+    display: none;}
+#hamburger-nav .logo
+{
+    width: 28vw;
+    margin-left:4.5vw;}
+
+.hamburger-menu
+{ 
+    width: 13vw; 
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+.hamburger-icon
+{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    width: 30%;
+    height:35%;
+    cursor:pointer; } 
+/*Menu line styling*/
+.menu-line
+{
+    /* width: 35px; 
+    height: 38px;  */
+    width: 100%;
+    border: 0.5px solid #f7f7f7; 
+    margin: 14% 0;}
+
+.menu-links{
+    position: absolute;
+    top:100%; 
+    right:0; 
+    width: fit-content; 
+    max-height: 0; /*if max-height>1 then the menu-links are visible*/
+    overflow: hidden; 
+    transition: all 0.3 ease-in-out; 
+}
+.hamburger-icon:hover
+{
+    padding: 0.8rem;
+    border-radius: 50%;
+    background-color: #0e273b; }
+
+.menu-links a:hover:after{
+    width: 100%; 
+}
+
+.menu-links a{
+    text-align: left;
+    display: block;
+    padding:9px;
+    font-size: 0.8rem;
+    color: #c0c0c0;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+.menu-links li{
+    list-style: none;
+}
+.menu-links.open
+{
+    text-align: left;
+    max-height: 300px;
+    width: 28.5vw;
+    border-left: 2px solid #0e273b; 
+    border-bottom: 2px solid #0e273b;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all 0.3 ease-in-out; 
+}
+
+/*Transforming the hamburger-icon into Cross sign*/
+.hamburger-icon.open .menu-line{
+    width: 1.5rem;
+}
+.hamburger-icon.open .menu-line:first-child{
+    transform-origin: left;
+    transform: translate(0.3rem,0.1rem) rotate(45deg) ;
+
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    /* background-color: rgb(255, 0, 0); */
+    
+}
+
+.hamburger-icon.open .menu-line:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger-icon.open .menu-line:last-child{
+    transform-origin: left;
+    transform: translate(0.3rem,-0.1rem) rotate(-45deg) ;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    
+}
+
+/*Section: 1--> Profile section*/
+
+section{
+    width: 100vw;
+    max-width: 100vw;
+    height: 110vh;
+    max-height: 110vh;
+    box-sizing: border-box;
+    padding-top: 4vh; 
+    min-height: fit-content; 
+    margin-bottom: 4vh;
+
+}
+
+#profile-section{
+    display:flex;
+    justify-content: center;
+
+    gap: 6rem;
+}
+.profile-pic-container{
+    display: flex; /*?*/
+    height: 400px; 
+    width: 400px; 
+
+    margin: auto 0;
+}
+.profile-pic-container img{
+    width:100%; 
+    height: 100%; 
+    object-fit: fill;
+}
+
+    /*Profile information-container*/
+.profile-information-container{
+    height: 400px; 
+    width:400px;
+
+    align-self: center;
+    text-align: center;
+}
+    /*Applying CSS in the texts of profile-information-section*/
+.text_greet{
+    background: linear-gradient(to left,
+                    violet,
+                    indigo,
+                    blue,
+                    green,
+                    yellow,
+                    orange,
+                    red);
+            -webkit-background-clip: text;
+            color: transparent;
+    /*set the font-size with media queries*/
+    font-size: 1.1rem;
+}
+.text_MyName{
+    /* color:#e1dedef1; */
+    color: #006bc3;
+    /*set the font-size with media queries*/
+    font-size:2.2rem;  
+}
+.text_Job{
+    color: #818185;
+    /*set the font-size with media queries*/
+    font-size: 1.5rem;
+    
+}
+    /*Applying CSS in Contact&CV-btn*/
+.contactAndCV-container{
+    width:400px;
+    display: flex; 
+    justify-content: space-around;
+    margin-top: 1rem;
+    margin-bottom:1.5rem;
+
+}
+.btn{
+    width: 35%; 
+    font-size: 1.3vw;
+    font-weight: 650;
+    text-align: center;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid #94a3b8; 
+    border-radius: 20px;
+
+    transition: transform .2s;
+}
+#cv_btn{
+    background-color: #818185;
+    color: #071e2f;
+    
+}
+#contact-btn{
+    color: #aba8a8;
+}
+#cv_btn:hover,#contact-btn:hover{
+    /* width: 35%;  */
+    cursor: pointer;
+    /* box-sizing: border-box; */
+    border: 1px solid white;
+    transition: all 200ms ease-in-out;
+
+
+    -ms-transform: scale(1.1); 
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); 
+}
+#cv_btn:hover{
+    color:#e2e2e2;
+    background-color: #071e2f;
+     
+}
+#contact-btn:hover{
+    color: #ffffff; 
+    background-color:#97979a ;
+}
+
+    /*Appling CSS in SocialMedia-Container div class*/
+#SocialMedias-Container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    
+}
+#SocialMedias-Container .socialMediaBox{
+    width: 2rem; 
+    height: 2rem; 
+    /* border: 1px solid white; */
+}
+.socialMediaBox:hover{
+    cursor: pointer;
+}
+/*End--> Profile section*/
+
+/*Section: 2--> About section*/
+#about{
+    position: relative;
+    height: fit-content;
+    padding: auto; 
+    margin-bottom: 40vh;
+}
+
+.about-content-container{
+    margin-top: 7rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    max-width: 100vw;
+    max-height: 110vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+
+}
+
+.about-pic-container{
+    width: 350px;
+    height: 350px;
+    /* background-color: white; */
+    /* border: 2px solid blue; */
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+
+}
+.about-pic-container img{
+    max-width:80%; 
+    height: auto;
+    display: block; 
+    border-radius: 10%;
+}
+.about-edu-exp-container{
+    max-width: 800px; 
+    position: relative;
+}
+.aboutBox-flex-container{
+
+    max-width: 800px;  /*change to min-width*/
+    height: auto;
+
+    display: flex; 
+    justify-content: center;
+    /* align-items: center; */
+    box-sizing: border-box;
+    gap: 1.5rem;
+    padding: 0.5rem;
+    /* border: 1px solid rgb(248, 7, 175); */
+}
+
+.about-details-container{
+    width: 40%; 
+    display:flex; 
+    /* justify-content: center; */
+
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid red; */
+    box-sizing: border-box;
+    /* padding: 1.5rem; */
+}
+
+.image-icon{
+    margin-top: 2rem;
+    width: 13%; 
+    height: auto; 
+    border: 1px solid white;
+}
+/*styling the texts of education and experience flex-box*/
+.about-details-container strong{
+    color: #006bc3;
+    font-size: 1.2rem;
+}
+.about-details-container p{
+    color: #818185;
+}
+
+.text-summery p{
+    width: 85%; 
+    max-width: 85%;
+    margin-top: 1rem;
+    color: #818185; 
+    /* font-size: 1.1rem; */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+    line-height: 1.6;
+    font-size: 1rem;
+}
+.border{
+    box-sizing: border-box;
+    border: 1px solid #006bc3;
+    box-shadow:1.5px 1.5px 7px 2px #4f4f4f;
+    border-radius: 1.5rem;
+
+}
+.border:hover{
+    box-shadow: 1.5px 1px 2px 1.2px #1919e1;
+}
+
+/* down arrow container*/
+.down-arrow-container{
+    /* border: 2px solid green; */
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 1rem;
+    width:2.5em; /*Need a specific value to work */
+    height: auto; 
+
+}
+.down-arrow-container img{
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+}
+
+/*Scroll down text on hover effect*/
+.tooltiptext{
+    display: none;
+    color: #818185;
+    animation-name: example;
+    animation-duration: 4s;
+    
+
+}
+@keyframes example {
+    from {color: rgb(4, 151, 249);}
+    to {color: rgb(255, 255, 255);}
+  }
+
+.down-arrow-container img:hover + .tooltiptext{
+    display: block; 
+    /* color: white;  */
+    font-size: 0.5rem;
+    text-align: center;
+}
+/*End-->About section*/
+
+
+/*Section: 3--> Educatioin section*/
+#education {
+    width:100%; 
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    box-sizing: border-box;
+    /* background-color: green; */
+    /* border: 2px solid blue; */
+    margin-bottom: 25vh;
+    margin-top: 25vh;}
+.education-container{
+    width: 90%; 
+    max-width: 90%; 
+    margin: auto; /*horizontally center a block element*/
+    /* border: 2px solid blue; */
+    height: 600px; 
+
+    display: grid;
+    gap: 5vw;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+
+}
+.schools-container{
+    height: 50%; 
+    box-sizing: border-box;
+    display: flex;
+}
+.schoolDescription h2{
+    color: #006bc3;
+}
+.achivement-icon-container{
+    width: 20%;
+    /* border: 1px solid white; */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.achivement-icon-container img{
+    width:2.5rem; 
+    height: auto;
+    object-fit: fill;
+}
+
+.schoolDescription{
+    
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    color: #818185;
+}
+.schoolDescription h2{
+    font-size: 1rem;
+}
+/*End-->Education section*/
+
+/* Section: 4--> Skills section */
+#skills{
+    width: 100vw; 
+    max-width: 100vw;
+    height: fit-content;
+    max-height: fit-content;
+    /* background-color: green; */
+}
+.skill-container{
+    width: 100%; 
+    max-width: 100%;
+    height: 90%; 
+    max-height: 90%;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:5rem;
+
+}
+
+.my-skill-description{
+    padding-top: 1rem;
+    width: 75%; 
+    max-width: 75%;
+    height: fit-content;   /*later lets see*/
+    box-sizing: border-box;
+    /* border-top: 3px solid blue; */
+    /* overflow: scroll; */
+
+
+}
+.my-skill-description p{
+    color: #818185;
+
+    line-height: 1.6;
+    font-size: 1rem;
+    text-align: justify;
+    /* font-weight: 600; */
+
+}
+.technical-skills-container{
+    margin-top: 1rem;
+    width: 85%; 
+    max-width: 85%;
+    height: 75%;
+    box-sizing: border-box;
+    /* border: 2px solid yellow; */
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+
+
+
+}
+.technical-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #818185;
+
+}
+.technical-container, .learned-platform-container{
+    
+    /* background-color: #666; */
+    width: 100%; 
+    max-width: 100%; 
+    height: auto;
+    margin: 1rem auto;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    color: #818185;
+    font-size: 1rem;
+    font-weight: 600;
+
+    box-sizing: border-box;
+    /* border: 3px solid green; */
+
+}
+.learned-platform-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item{
+    /* width: 8vw;
+    max-width: 8vw; */
+    /* padding: auto; */
+    height: 13vh;
+    /* border: 1px solid white; */
+    box-sizing: border-box;
+    margin: 1rem;
+    text-align: center;
+}
+/* .icon-item{
+    width: 99%;
+    max-width: 99%;
+} */
+.item p{
+    text-align: center;
+}
+
+.learning-technologies-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+.technologies-container {
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tech-column {
+    flex: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    /* border: 2px solid green; */
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 600px) {
+    .tech-column {
+        flex: 100%;
+    }
+}
+
+/* Style for the individual div elements */
+.tech-div {
+    /* background-color: #f2f2f2; */
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #818185;
+
+    display: flex; 
+    /* justify-content: space-around; */
+    gap:1vw;
+    align-items: center;
+}
+.right-arrow-div{
+    width: 5%; 
+    max-width:5%;
+    height: auto;  
+}
+
+
+
+
+
+
+
+
+
+
+
+/* End--> Skills section */
+
+/* Se.ction: 5--> Contact sectioin */
+#contact{
+    /* border-top: 10px solid black; */
+    width: 100vw;
+    height: 100vh;
+    max-height: fit-content;
+    /* background-color: red; */
+    position:relative; 
+}
+.c-main-container{
+    width: 95%;
+    min-width: 95%; 
+    /* height: auto; */
+    /* background-color: black ; */
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto; 
+}
+.contact-box{
+    flex: 50%; 
+    padding: 10%; 
+    box-sizing: border-box;
+}
+.contact-left{
+    /* background-color: #045704; */
+    background-color: #091609;
+
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+
+}
+.contact-left *{
+    background-color: transparent;
+}
+.contact-left p{
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #818185;
+}  
+.contact-left p i, .contact-left .social-icons a i {
+    margin-right: 1vw;
+    font-size: 1.2rem;
+    color: #818185;
+
+}
+.contact-left .social-icons{
+    margin-top: 30px;
+    display: flex;
+    gap: 3vw;
+}
+.contact-right{
+    
+    position: relative;
+}
+@media (max-width: 600px){
+    .tech-column{
+        flex: 100%;
+    }
+}
+/* End--> Contact section */
+
+/*contact-right div*/
+.input-line{
+    display:flex;
+    color: #818185;
+    font-size: 1rem;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.input-line label {
+    flex: 1; 
+    text-align: right; 
+    margin-right: 10px; 
+}
+.input-line input, .input-line textarea{
+    color: #DDDDDD;
+    flex: 2; 
+    border: none; 
+    border-bottom: 1px solid #818185;
+    padding: 5px;
+    background: transparent;
+    outline: none; /*Remove the blue outline on focus*/
+}
+#submit-btn{
+    font-size: 1rem;
+    width: 120px;
+    color: #818185;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    cursor: pointer;
+}
+
+
+#submit-btn:hover{
+    color: #e2e2e2;
+    cursor: pointer;
+    /* box-sizing: border-box; */
+    border: 1px solid white;
+    transition: all 200ms ease-in-out;
+
+
+    -ms-transform: scale(1.1); 
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); 
+}
+
+
+/*Footer section*/
+footer{
+    /* margin-top:60px; */
+    width: 100vw;
+    margin-top: 10vh;
+    height: 11vh;
+    box-sizing: border-box;
+}
+.copyright-container{
+    width: 100%; 
+    height: 100%; 
+    /* border: 2px solid green; */
+
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+}
+
+.copyright-container p{
+    color: #818185; 
+    text-align: center;
+    font-size: 0.6rem;
+    /* background-color: black; */
+
+}
+
+/*Form message*/
+#form-msg{
+    display: flex; 
+    justify-content: center;
+    
+    /* margin: 5.5rem; */
+    text-align: center;
+    color: green;
+    font-size: 0.9rem;
+}
+
+
+
+
+

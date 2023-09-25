@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!--link style.css and mediaQuaries.css file-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQuaries.css">
+    <script src="https://kit.fontawesome.com/9b8d5e51d5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!--Header Section-->
+    <header>
+        <nav id="header-nav-desktop">
+            <!--Logo Container-->
+            <div class="logo">
+                <a href="index.html"><img src="Assets/Logo.png" alt="Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#profile-section" class="active">Home</a></li>
+                <li><a href="#education" onclick="changeColor1()">Education</a></li>
+                <li><a href="#about" onclick="changeColor2()">About</a></li>
+                <li><a href="#contact" onclick="changeColor3()">Contact</a></li>
+                <li><a href="#skills" onclick="changeColor4()">Skills</a></li>
+            </ul>
+        </nav>
+    
+        <!--Media screen for less than 1200px browser display-->
+        <nav id="hamburger-nav">
+            <!--Logo Container-->
+            <div class="logo">
+                <a href="index.html"><img src="Assets/Logo.png" alt="Logo"></a>
+            </div>
+
+            <!--For nav links in hamburger menu-->
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                </div>
+        
+                <div class="menu-links">
+                    <li><a href="#home" class="active" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                    <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+                </div> 
+            </div><!--End of hamburger-menu-->
+        </nav> <!--End of hamburger-nav-->
+    </header>
+    <!--End of Header Section-->
+    
+    <!--Section 1: Profile-->
+    <section id="profile-section">
+        <div class="profile-pic-container">
+            <img src="Assets/PrashantSingh.png" alt="Profile Picture">
+        </div>
+    
+        <div class="profile-information-container">
+            <p class="text_greet">Hello, I'm</p>
+            <h2 class="text_MyName">Prashant k.r Singh</h2>
+            <h4 class="text_Job">Web Developer</h4>
+    
+            <!--Start Editing-->
+            <div class="contactAndCV-container">
+                <!--1st button: CV button-->
+                <button id="cv_btn" class="btn" onclick="window.open('./assets/PrashantKumarSingh_CV 2.pdf')">Open CV</button>
+            
+                <!--2nd button: Contact button-->
+                <button id="contact-btn" class="btn" onclick="location.href='./#contact'">Contact Info</button>
+            </div>
+
+            <!--Social Media Link-->
+            <div id="SocialMedias-Container">
+                <!--First image link: Github-->
+                <img src="./Assets/GitHub.png" alt="Linkdin Profile" class="socialMediaBox" id="GitHub" onclick="location.href='https://github.com/SinghPrashant369'">
+            
+                <!--Second image link: LinkedIn-->
+                <img src="./Assets/Linkedin.png" alt="Linkdin Profile" class="socialMediaBox" id="Linkedin" onclick="location.href='https://www.linkedin.com/in/prashant-singh-pxsh369'">
+            </div>
+        </div><!--END OF profile-information-container-->
+    </section>
+    <!--End of Profile section-->
+    
+    <!--Section 2: about-->
+    <section id="about">
+        <h2 class="nav-heading-font-size" id="about-title"><span>About</span></h2>
+    
+        <div class="about-content-container">
+            <div class="about-pic-container">
+                <img src="./Assets/aboutPic.jpg" alt="This is photo">
+            </div>
+            <div class="about-edu-exp-container">
+                <div class="aboutBox-flex-container">
+                    <div class="about-details-container border">
+                        <img src="./Assets/graduation cap.png" alt="graduation cap icon" class="image-icon">
+                        <strong>Education</strong>
+                        <p>10+2 in Science</p>
+                        <p>Bachelor: BSc (Hons) Computing</p>
+                    </div>
+       
+                    <div class="about-details-container border">
+                       <img src="./Assets/experience.png" alt="graduation cap icon" class="image-icon">
+                       <strong>Experience</strong>
+                       <!-- <p>🐵</p> -->
+                       <p>No Experience</p>
+                    </div>
+                </div>
+                <div class="text-summery">
+                    <p>Energetic student eager to build professional abilities while pursuing an IT degree. Motivated, enthusiastic, and friendly with strong communication and teamwork abilities.</p>
+                </div>
+            </div>
+        </div>
+    
+        <!--13 sept: Start 2:38 P.M-->
+        <!--Scroll down container-->
+        <div class="down-arrow-container">
+            <img src="./Assets/down-arrow.png" alt="Down Arrow" id="down-arrow" onclick="location.href='./#education'">
+    
+            <span class="tooltiptext">Scroll down</span> <!--dd-->
+        </div>
+    
+    </section>
+    <!--End of About section-->
+    
+    <!--Section 3: Education-->
+    <section id="education">
+        <h2 class="nav-heading-font-size" id="education-title"><span>Education</span></h2><br>
+    
+        <div class="education-container">
+            <div class="schools-container">
+                <div class="achivement-icon-container">
+                    <img src="./Assets/ddd.png" alt="Achivements icon">
+                </div>
+                <div class="schoolDescription">
+                    <p>2006</p>
+                    <h2>Secondary Education</h2>
+                    <h4>Kathmandu National School</h4>
+                </div>
+            </div>
+    
+            <div class="schools-container">
+                <div class="achivement-icon-container">
+                    <img src="./Assets/CCRC-logo.webp" alt="Achivements icon">
+                </div>
+                <div class="schoolDescription">
+                    <p>2006</p>
+                    <h2>Higher Secondary</h2>
+                    <h4>Capital College and Research Center</h4>
+                    <p>-Science</p>
+                </div>
+            </div>
+    
+            <div class="schools-container">
+                <div class="achivement-icon-container">
+                    <img src="./Assets/Islington-College.png" alt="Achivements icon">
+                </div>
+                <div class="schoolDescription">
+                    <p>2006</p>
+                    <h2>Bachelor</h2>
+                    <h4>Islington College</h4>
+                    <p>-BSc (Hons) Computing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End of Education section-->
+    
+    <!--Section 4: Skills-->
+    <section id="skills">
+        <h2 class="nav-heading-font-size" id="skills-title"><span>Skills</span></h2>
+        <div class="skill-container">
+            <div class="my-skill-description">
+                <p>I possess strong soft skills, excelling in problem-solving, effective communication, teamwork, and adaptability. I'm known for my excellent time management skills, which enable me to stay organized and consistently meet project deadlines. Additonally, I hold certifications in AWS, Machine Learning and CCNA. </p>
+            </div>
+            <div class="technical-skills-container">
+    
+                <div class="technical-container">
+                    <img src="./Assets/technical-icon-active.png" alt="technical-support icon" class="item" id="technical-icon">
+                    <h2>Technical</h2>
+                    <p style="color: #c2c2c3;">I have become confident using the following platforms:</p>
+                </div>
+                <div class="learned-platform-container">
+                    <div class="item item1">
+                        <img src="./Assets/html-icon.png" alt="html icon" class="icon-item" id="html-icon">
+                        <p>HTML5</p>
+                    </div>
+                    <div class="item item2">
+                        <img src="./Assets/css-icon.png" alt="css icon" class="icon-item" id="css-icon">
+                        <p>CSS</p>
+                    </div>
+                    <div class="item item3">
+                        <img src="./Assets/JavaScript-icon.png" alt="JavaScript icon" class="icon-item" id="JavaScript-icon">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="item item4">
+                        <img src="./Assets/java-icon.png" alt="java icon" class="icon-item" id="java-icon">
+                        <p>Java</p>
+                    </div>
+                    <div class="item item5">
+                        <img src="./Assets/python-icon.png" alt="python icon" class="icon-item" id="python-icon">
+                        <p>Python</p> 
+                    </div>
+                    <div class="item item6">
+                        <img src="./Assets/mysql-icon.png" alt="mysql icon" class="icon-item" id="mysql-icon">
+                        <p>MySql</p>
+                    </div>
+                    <div class="item item7">
+                        <img src="./Assets/github-icon.png" alt="github icon" class="icon-item" id="github-icon">
+                        <p>GitHub</p>
+                    </div>
+    
+                    <div class="item item8">
+                        <img src="./Assets/iot-icon.png" alt="iot icon" class="icon-item" id="iot-icon">
+                        <p>IoT</p>
+                    </div>
+
+                    <div class="item item8">
+                        <img src="./Assets/responsive-icon.png" alt="responsive icon" class="icon-item" id="responsive-icon">
+                        <p>Responsive Design</p>
+                    </div>
+                </div>
+                <!--Also Learning platform-->
+                <div class="learning-technologies-container">
+                    <p style="color: #c2c2c3; text-align: center;">I have also become familiar with these technologies</p>
+    
+                    <div class="technologies-container">
+                        <div class="tech-column">
+                            <div class="tech-div">
+                                <img src="./Assets/arrow-right-icon.png" alt="Arrow right icon" class="right-arrow-div">
+                                <p>React.js</p>
+                            </div>
+    
+                            <div class="tech-div">
+                                <img src="./Assets/arrow-right-icon.png" alt="Arrow right icon" class="right-arrow-div">
+                                <p>Node.js</p>
+                            </div>
+                            <div class="tech-div">
+                                <img src="./Assets/arrow-right-icon.png" alt="Arrow right icon" class="right-arrow-div">
+                                <p>Bootstrap 4</p>
+                            </div>
+                        </div>
+                        <div class="tech-column">
+                            <div class="tech-div">
+                                <img src="./Assets/arrow-right-icon.png" alt="Arrow right icon" class="right-arrow-div">
+                                <p>JQuery</p>
+                            </div>
+                            <div class="tech-div">
+                                <img src="./Assets/arrow-right-icon.png" alt="Arrow right icon" class="right-arrow-div">
+                                <p>Artificial intelligence</p>
+                            </div>
+                            <div class="tech-div">
+                                <img src="./Assets/arrow-right-icon.png" alt="Arrow right icon" class="right-arrow-div">
+                                <p>Tailwind CSS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End of Skills section-->
+    
+    <!-- Section 5: Contact -->
+    <section id="contact">
+        <div class="c-main-container">
+            <div class="contact-left contact-box">
+                <h2 id="contact-title" style="color: #d0cfcf;">Contact Me</h2>
+                <p><i class="fa-solid fa-paper-plane" style="color: #818185;"></i><a
+                        href="mailto:prashantsingh.xps@gmail.com">prashantsingh.xps@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone-volume" style="color: #818185;"></i><a href="tel:9745570587">+977 9745570587</a></p>
+                <div class="social-icons">
+                    <a href="www.facebook.com"><i class="fa-brands fa-facebook-f" style="color: #818185;"></i></a>
+                    <a href="www.instagram.com"><i class="fa-brands fa-instagram" style="color: #818185;"></i></a>
+                    <a href="www.linkedin.com"><i class="fa-brands fa-linkedin-in" style="color: #818185;"></i></a>
+                </div>
+            </div>
+            <div class="contact-right contact-box">
+                <form name="submit-to-google-sheet">
+                    <div class="input-line">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="Name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-line">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="Email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-line">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="Message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button class="btn" id="submit-btn" type="submit">Contact Me</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- End of contact section -->
+
+    <!--Footer section-->
+    <footer>
+        <di class="copyright-container">
+            <p>©2023-2024 Prashant k.r. Singh|All Rights Reserved
+            </p>
+        </div>
+    </footer>
+    <!--End footer-->
+    
+    <!--Link script.js file-->
+    <script src="script.js"></script>
+    <script src="iconActive.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzJ6-mm5v55birkb3SUdo40-PLfouDMXhGR3Ksdkh9GryaThA-NlR4_b3BpXVBWierFvw/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                alert("Message sent successfully")
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>     
+</body>
+</html>
