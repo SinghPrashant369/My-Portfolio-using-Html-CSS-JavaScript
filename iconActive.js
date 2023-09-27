@@ -26,7 +26,7 @@ setupMouseEvents("css-icon","./Assets/css-icon-active.png","./Assets/css-icon.pn
 setupMouseEvents("JavaScript-icon","./Assets/JavaScript-icon-active.png","./Assets/JavaScript-icon.png");
 setupMouseEvents("java-icon","./Assets/java-icon-active.png","./Assets/java-icon.png");
 setupMouseEvents("python-icon","./Assets/python-icon-active.png","./Assets/python-icon.png");
-setupMouseEvents("mysql-icon","./Assets/mysql-icon-active.png","./Assets/mysql-icon.png");
+setupMouseEvents("mysql-icon","./Assets/database-icon-active.png","./Assets/database-icon.png");
 setupMouseEvents("github-icon","./Assets/github-icon-active.png","./Assets/github-icon.png");
 setupMouseEvents("iot-icon","./Assets/iot-icon-active.png","./Assets/iot-icon.png");
 setupMouseEvents("responsive-icon","./Assets/responsive-icon-active.png","./Assets/responsive-icon.png");
